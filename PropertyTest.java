@@ -19,7 +19,6 @@ public class PropertyTest
      */
     public PropertyTest()
     {
-        property1 = new Property("T3 Monte Belo", 150000.0);
     }
 
     /**
@@ -30,10 +29,11 @@ public class PropertyTest
     @BeforeEach
     public void setUp()
     {
+        property1 = new Property("T3 Monte Belo", 150000.0);
     }
     
     /**
-     * Teste
+     * Teste construtor
      */
     @Test
     public void testConstructor(){

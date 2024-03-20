@@ -16,6 +16,7 @@ public class CompanyTest
     Company company1;
     User client1, client2, seller1, seller2;
     Property property1, property2;
+    Sell sell1, sell2;
     /**
      * Default constructor for test class CompanyTest
      */
@@ -97,7 +98,24 @@ public class CompanyTest
     public void testRegisterPropertyNull(){
         assertFalse(company1.registerProperty(null));
     }
-    
+    @Test
+    public void testCreateSell(){
+        company1.registerClient(client1);
+        company1.registerSeller(seller1);
+        company1.registerProperty(property1);
+        assertTrue(company1.createSell(client1, seller1, property1));
+    }
+    @Test
+    public void testCalculateSellsOfTheYear(){
+        company1.registerClient(client1);
+        company1.registerSeller(seller1);
+        company1.registerProperty(property1);
+        company1.createSell(client1, seller1, property1);
+        assertEquals(1, company1.calculateSellsOfTheYear(2024));
+    }
+    @Test
+    public void testFindSellsOfTheYear(){
+    }
     /**
      * Tears down the test fixture.
      *
