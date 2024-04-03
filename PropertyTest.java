@@ -1,5 +1,3 @@
-
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,13 +12,7 @@ import org.junit.jupiter.api.Test;
 public class PropertyTest
 {
     Property property1;
-    /**
-     * Default constructor for test class PropertyTest
-     */
-    public PropertyTest()
-    {
-    }
-
+    
     /**
      * Sets up the test fixture.
      *
@@ -46,14 +38,5 @@ public class PropertyTest
     @Test
     public void testToString(){
         assertEquals("  Descricao   : "+"T3 Monte Belo"+"\n  Preco    : "+"150000.0"+" Euros", property1.toString());
-    }
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @AfterEach
-    public void tearDown()
-    {
     }
 }

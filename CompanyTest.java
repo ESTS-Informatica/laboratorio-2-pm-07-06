@@ -1,5 +1,3 @@
-
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -35,7 +33,7 @@ public class CompanyTest
     {
           client1 = new User("José Manuel", "911111111", "zemanel@yahoo.com");
           client2 = new User("António Francisco", "922222222", "tochico@hotmail.com");
-          seller1 = new User("Fernando Fernandes", "966777101", "ff@remax.pt");
+          seller1 = new User("Fernando Fernandes", "966777101", "fefe@remax.pt");
           seller2 = new User("Rodrigo Rodrigues", "966777152", "roro@remax.pt");
           property1 = new Property("T3 Monte Belo", 150000.0);
           property2 = new Property("T5 Monte Feio", 350000.0);
@@ -115,6 +113,11 @@ public class CompanyTest
     }
     @Test
     public void testFindSellsOfTheYear(){
+        company1.registerClient(client1);
+        company1.registerSeller(seller1);
+        company1.registerProperty(property1);
+        company1.createSell(client1, seller1, property1);
+        assertEquals(seller1.getName(), company1.findSellerOfTheYear(2024));
     }
     /**
      * Tears down the test fixture.

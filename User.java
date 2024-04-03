@@ -1,5 +1,3 @@
-
-
 /**
  * User can either be a client or a seller.
  *

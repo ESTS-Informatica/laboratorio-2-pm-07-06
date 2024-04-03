@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.time.LocalDate;
 import java.util.List;
@@ -45,7 +44,7 @@ public class Company {
      * @return This company sellers.
      */
     public List<User> getSellers() {
-        return this.sellers;         // dummy implementation
+        return this.sellers;         
     }
 
     /**
@@ -54,7 +53,7 @@ public class Company {
      * @return This company's properties.
      */
     public List<Property> getProperties() {
-        return this.properties;         // dummy implementation
+        return this.properties;         
     }
 
     /**
@@ -63,7 +62,7 @@ public class Company {
      * @return This company sells.
      */
     public List<Sell> getSells() {
-        return this.sells;         // dummy implementation
+        return this.sells;         
     }
 
     /**
@@ -161,8 +160,8 @@ public class Company {
         int countMAX = 0;
         for(User s : sellers){
             int count = 0;
-            for(Sells sa : sells){
-                if(sa.getSeller() == s && s.getDate().getYear() == year){
+            for(Sell sa : sells){
+                if(sa.getSeller() == s && sa.getDate().getYear() == year){
                     count++;
                 }
             }
